@@ -1,0 +1,12 @@
+.l-wrap {
+    padding: 0 1rem;
+}
+
+.l-restrict {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.l-restrict--narrow {
+    max-width: 900px;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@natureslaboratory/st-peters-church",
+  "version": "1.0.0",
+  "description": "Initial Commit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c rollup.config.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natureslaboratory/st-peters-church.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natureslaboratory/st-peters-church/issues"
+  },
+  "homepage": "https://github.com/natureslaboratory/st-peters-church#readme",
+  "dependencies": {
+    "@natureslaboratory/responsive-nav": "^1.0.2",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.2",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@rollup/plugin-typescript": "^8.2.3"
+  }
+}
