@@ -4,6 +4,8 @@
     min-height: 8.5rem;
     border-bottom: 1px solid black;
     gap: 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .c-logo {
@@ -13,7 +15,8 @@
 
 .c-hero {
     position: relative;
-    min-height: 25rem;
+    min-height: 32rem;
+    /* margin-bottom: -18.3rem; */
 }
 
 .c-hero__image {
@@ -24,10 +27,241 @@
     z-index: -10;
 }
 
+.c-hero__title-wrapper {
+    max-width: 1280px;
+}
+
 .c-hero__title {
     background-color: rgba(0, 0, 0, 0.43);
     color: white;
     position: absolute;
     top: 2rem;
     padding: 0.3rem 0.7rem;
+    font-size: 6rem;
 }
+
+.c-frame {
+    padding: 2rem;
+    border: 1px solid black;
+}
+
+.c-carousel {
+    max-width: 1100px;
+}
+
+.c-carousel img {
+    aspect-ratio: 18/9;
+    object-fit: cover;
+}
+
+.c-carousel__controls {
+    position: absolute;
+    bottom: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.678);
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-carousel__caption {
+    transition: 150ms;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+}
+
+.c-carousel__caption.hide {
+    opacity: 0;
+}
+
+.c-carousel__buttons {
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.c-carousel__button {
+    background-color: transparent;
+    border: none;
+    padding: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.c-button {
+    background-color: var(--primary);
+    font-size: 1rem;
+    padding: 1.25rem 2.5rem;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.c-button--secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.c-text-image {
+    position: relative;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    display: flex;
+    justify-content: center;
+}
+
+.c-text-image__outer {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    max-width: 1100px;
+    gap: 4rem;
+
+}
+
+.c-text-image__image > img {
+    /* width: 100%; */
+    max-width: 500px;
+}
+
+.c-text-image__inner::before {
+    content: "";
+    position: absolute;
+    top: -3.5rem;
+    transform: translateX(-100%);
+    height: 1.2rem;
+    width: 15rem;
+    background-color: var(--primary);
+}
+
+.c-text-image__text {
+    margin-bottom: 2rem;
+}
+
+.c-text-image__inner {
+    /* max-width: 700px; */
+    position: relative;
+}
+
+.c-text-card {
+    background-color: white;
+    width: auto;
+    /* position: absolute; */
+    padding: 3rem;
+    width: 37rem;
+}
+
+.c-text-card p {
+    margin-right: 0;
+    max-width: 60ch;
+}
+
+.c-indent {
+    margin-top: -18.3rem;
+}
+
+.c-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 6rem;
+}
+
+.c-images__image {
+    width: 100%;
+}
+
+.c-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    gap: 4rem;
+}
+
+.c-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+}
+
+
+.c-card__content {
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+.c-card__image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.c-card__link > button {
+    transform: translateY(50%);
+}
+
+.c-cta {
+    max-width: 31rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding-top: 2.5rem;
+}
+
+.c-cta__text::after {
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12rem;
+    height: 1rem;
+    background-color: var(--primary);
+    position: absolute;
+}
+
+.c-cta__text {
+    margin-bottom: 2.5rem;
+}
+
+.c-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    column-gap: 4rem;
+    row-gap: 1.5rem;
+}
+
+.c-form__label {
+    font-weight: 600;
+}
+
+.c-form__column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.c-form__section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem
+}
+
+.c-form__input, .c-form__textarea {
+    border: none;
+    background-color: var(--primary);
+    padding: 1rem;
+}
+
+.c-form__textarea {
+    min-height: 9rem;
+}
+
+.c-form__submit {
+    margin-right: auto;
+    margin-top: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+

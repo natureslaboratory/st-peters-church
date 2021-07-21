@@ -53,96 +53,58 @@ caption, th {
     --side-padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+html {
     font-size: 100%;
-    font-weight: normal;
 }
 
-h1, h2 {
-    font-weight: 900;
+/*16px*/
+
+body {
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #000000;
+}
+
+p {
+    margin-bottom: 1rem;
+    /* font-size: 1.1rem; */
+    line-height: 1.35rem;
+    max-width: 75ch;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0 0 0.7rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.25;
 }
 
 h1 {
-    font-size: var(--size-700);
-    line-height: var(--size-700);
+    font-size: 2.441rem;;
+    font-weight: 700;
 }
 
 h2 {
-    font-size: var(--size-600);
-    line-height: var(--size-600);
+    font-size: 1.563rem;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: var(--size-600);
-    line-height: var(--size-600);
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 h4 {
-    font-size: var(--size-500);
-    font-weight: bold;
+    font-size: 1.563rem;
 }
 
-q:before, q:after {
-    content: '';
+h5 {
+    font-size: 1.25rem;
 }
 
-abbr, acronym {
-    border: 0;
-}
-
-
-h1, h2, h3, h4 {
-    font-family: var(--header-font);
-}
-
-p, li {
-    max-width: 60ch;
-    margin-left: 0;
-}
-
-h1 {
-    max-width: 15ch;
-}
-
-h2, h3 {
-    max-width: 25ch;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* background-color: var(--secondary-color); */
-    overflow-x: hidden;
-}
-
-main {
-    flex-grow: 2;
-    align-items: stretch;
-}
-
-body.no-scroll {
-    overflow-y: hidden;
-}
-
-@media (min-width: 45em) {
-    h1 {
-        font-size: var(--size-900);
-        line-height: var(--size-900);
-    }
-
-    h2 {
-        font-size: var(--size-700);
-        line-height: var(--size-700);
-    }
-
-    figcaption {
-        font-size: var(--size-400);
-        line-height: var(--size-400);
-    }
-
-    blockquote p {
-        /* font-size: var(--size-500); */
-        max-width: 40ch;
-    }
+small, .text_small {
+    font-size: 0.8rem;
 }

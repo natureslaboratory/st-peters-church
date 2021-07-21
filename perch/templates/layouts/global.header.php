@@ -5,6 +5,7 @@
 	<title><?php perch_pages_title(); ?></title>
 	<?php perch_page_attributes(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <link href="/assets/css/base.css?v=<?= rand() ?>" rel="stylesheet" type="text/css" />
     <link href="/assets/css/responsive-nav.css?v=<?= rand() ?>" rel="stylesheet" type="text/css" />
     <link href="/assets/css/layout.css?v=<?= rand() ?>" rel="stylesheet" type="text/css" />
@@ -13,7 +14,7 @@
 <body>
 
 <div class="l-wrap">
-    <div class="c-header l-restrict">
+    <div class="c-header">
         <div class="c-logo">
             <p>Icon</p>
         </div>
@@ -48,9 +49,7 @@
             <a href="mailto:stpetersstaithes@gmail.com">stpetersstaithes@gmail.com</a>
         </div>
         <div class="c-social-media">
-            <div class="c-social-media__icon">
-                F
-            </div>
+            <i class="fab fa-facebook"></i>
         </div>
     
     </div>
