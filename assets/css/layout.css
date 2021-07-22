@@ -7,6 +7,7 @@
 .l-restrict {
     max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .l-restrict--narrow {
@@ -16,10 +17,23 @@
 .l-block {
     /* margin: 4rem 0; */
     padding: 6rem 1rem;
+    width: 100%;
+}
+
+.l-block--padding-none {
+    padding: 0 1rem;
 }
 
 .l-block--padding-half {
     padding: 3rem 1rem;
+}
+
+.l-block--padding-top {
+    padding: 6rem 1rem 0 1rem;
+}
+
+.l-block--padding-bottom {
+    padding: 0 1rem 6rem 1rem;
 }
 
 .l-block--primary {

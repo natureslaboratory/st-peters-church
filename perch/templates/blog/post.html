@@ -1,26 +1,32 @@
 <perch:blog id="postTitle" type="text" label="Title" required="true" size="xl autowidth" order="1" suppress="true" />
 <perch:blog id="postSubTitle" type="text" label="Subtitle" suppress="true" order="2">
-<perch:blog id="featureImage" type="image" height="500" label="Feature Image" suppress="true" />
+<perch:blog id="featureImage" type="image" width="1280" help="Use a high resolution image here (more than 1280px wide)" label="Feature Image" suppress="true" />
 
 <div class="c-hero">
     <img class="c-hero__image" src="<perch:blog id="featureImage" type="image" label="Feature Image" />">
-    <div class="l-restrict c-hero__title-wrapper">
-        <h1 class="c-hero__title"><perch:blog id="postTitle"></h1>
+    <div class="l-block l-block--padding-none">
+        <div class="l-restrict c-hero__title-wrapper-outer">
+            <div class="c-hero__title-wrapper">
+                <h1 id="postTitle" class="c-hero__title"><perch:blog id="postTitle"></h1>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="l-restrict">
-    <article class="c-article c-text-card c-indent">
-        <div class="c-post-details">
-            <perch:template path="blog/post_details.html" />
-        </div>
-        
-        <perch:layout path="tags" slug="<perch:blog id="postSlug">"/>
-        
-        <div class="c-post l-flow">
-            <perch:template path="content/blocks/post_blocks.html" />
-        </div>
-    </article>
+<div class="l-block l-block--padding-none">
+    <div class="l-restrict">
+        <article class="c-article c-text-card c-indent">
+            <div class="c-post-details">
+                <perch:template path="blog/post_details.html" />
+            </div>
+            
+            <perch:layout path="tags" slug="<perch:blog id="postSlug">"/>
+            
+            <div class="c-post l-flow">
+                <perch:template path="content/blocks/post_blocks.html" />
+            </div>
+        </article>
+    </div>
 </div>
 
 <perch:blog id="postURL" suppress="true" label="Post URL" type="hidden" />

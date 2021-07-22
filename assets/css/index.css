@@ -15,8 +15,8 @@
 
 .c-hero {
     position: relative;
-    min-height: 32rem;
     /* margin-bottom: -18.3rem; */
+    display: flex;
 }
 
 .c-hero__image {
@@ -25,23 +25,36 @@
     width: 100%;
     height: 100%;
     z-index: -10;
+    min-height: 32rem;
+    top: 0;
+    height: 100%;
+}
+
+.c-hero__title-wrapper-outer {
+    display: flex;
 }
 
 .c-hero__title-wrapper {
     max-width: 1100px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .c-hero__title {
     background-color: rgba(0, 0, 0, 0.43);
     color: white;
-    position: absolute;
-    top: 2rem;
+    /* position: absolute; */
+    /* margin-top: 2rem; */
     padding: 0.3rem 0.7rem;
     font-size: 6rem;
 }
 
+.c-hero__title--small {
+    font-size: 4rem;
+}
+
 .c-indent {
-    margin-top: -18.3rem;
+    /* margin-top: -18.3rem; */
 }
 
 .c-frame {
@@ -551,16 +564,24 @@
     .c-hero__title {
         font-size: 5rem;
     }
+
+    .c-hero__title--small {
+        font-size: 3rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .c-hero {
-        min-height: 20rem;
+        /* min-height: 20rem; */
         /* margin-bottom: -18.3rem; */
     }
 
+    .c-hero__image {
+        min-height: 20rem;
+    }
+
     .c-indent {
-        margin-top: -12.3rem;
+        /* margin-top: -12.3rem; */
     }
 
     .c-text-card {
@@ -578,6 +599,10 @@
 
     .c-card__content {
         padding: 1rem 1rem 0 1rem;
+    }
+
+    .c-hero__title--small {
+        font-size: 2rem;
     }
 }
 

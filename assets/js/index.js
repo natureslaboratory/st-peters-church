@@ -4881,5 +4881,10 @@
   scrollToTopButton.addEventListener("click", function () {
       window.scrollTo(0, 0);
   });
+  var postTitle = document.getElementById("postTitle");
+  console.log(postTitle.style.fontSize);
+  if (postTitle.innerHTML.length > 15) {
+      postTitle.classList.add("c-hero__title--small");
+  }
 
 }());

@@ -14,43 +14,45 @@
 <body>
 
 <div class="l-wrap">
-    <div class="c-header">
-        <div class="c-logo">
-            <p>Icon</p>
-        </div>
-        <div class="c-navigation" data-breakpoint="768" data-type="dynamic">
-                
-            <?php
-            $isHome = false;
-            if ($_SERVER["REQUEST_URI"] == "/") {
-                $isHome = true;
-            }
-            // perch_content_custom("Icon", ["data" => ["isHome" => $isHome]]);
-            
-            perch_pages_navigation(array(
-                'template' => array('topNavMain.html', 'topNavSub.html')
-            ));
-            ?>
-            <div class="c-hamburger hide">
-                <button class="c-hamburger__button c-navbar__button">
-                    <!-- <div class="c-hamburger__line"></div>
-                    <div class="c-hamburger__line"></div>
-                    <div class="c-hamburger__line"></div> -->
-                    <a class="c-navbar__link c-navbar__link--hover-invert c-navbar__link--fixed-size">Menu</a>
-                </button>
-                <?php
-                perch_pages_navigation(array(
-                    'template' => array('hamburgerMain.html', 'hamburgerSub.html')
-                ))
-                ?>
+    <div class="l-block l-block--padding-none">
+        <div class="c-header">
+            <div class="c-logo">
+                <p>Icon</p>
             </div>
+            <div class="c-navigation" data-breakpoint="768" data-type="dynamic">
+                    
+                <?php
+                $isHome = false;
+                if ($_SERVER["REQUEST_URI"] == "/") {
+                    $isHome = true;
+                }
+                // perch_content_custom("Icon", ["data" => ["isHome" => $isHome]]);
+                
+                perch_pages_navigation(array(
+                    'template' => array('topNavMain.html', 'topNavSub.html')
+                ));
+                ?>
+                <div class="c-hamburger hide">
+                    <button class="c-hamburger__button c-navbar__button">
+                        <!-- <div class="c-hamburger__line"></div>
+                        <div class="c-hamburger__line"></div>
+                        <div class="c-hamburger__line"></div> -->
+                        <a class="c-navbar__link c-navbar__link--hover-invert c-navbar__link--fixed-size">Menu</a>
+                    </button>
+                    <?php
+                    perch_pages_navigation(array(
+                        'template' => array('hamburgerMain.html', 'hamburgerSub.html')
+                    ))
+                    ?>
+                </div>
+            </div>
+            <div class="c-header__email">
+                <a href="mailto:stpetersstaithes@gmail.com">stpetersstaithes@gmail.com</a>
+            </div>
+            <div class="c-social-media">
+                <i class="fab fa-facebook"></i>
+            </div>
+        
         </div>
-        <div class="c-header__email">
-            <a href="mailto:stpetersstaithes@gmail.com">stpetersstaithes@gmail.com</a>
-        </div>
-        <div class="c-social-media">
-            <i class="fab fa-facebook"></i>
-        </div>
-    
     </div>
 </div>
