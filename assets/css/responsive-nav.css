@@ -112,7 +112,7 @@
 }
 
 .c-navbar__sub-link, .c-hamburger__link, .c-hamburger__element-button, .c-navbar__button, .c-navbar__link, .c-hamburger__sub-link {
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     text-decoration: none;
     color: inherit;
@@ -185,6 +185,8 @@
     transition: 150ms;
     z-index: 20;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .c-hamburger__menu[data-type="dropdown"].show {
@@ -195,7 +197,7 @@
 .c-hamburger__menu[data-type="slideover"].show {
     transform: translateX(0);
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.192);
-    display: block;
+    /* display: block; */
 }
 
 .c-navbar__sub-link {

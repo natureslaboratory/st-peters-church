@@ -47,6 +47,7 @@
     /* margin-top: 2rem; */
     padding: 0.3rem 0.7rem;
     font-size: 6rem;
+    margin: 0;
 }
 
 .c-hero__title--small {
@@ -558,6 +559,15 @@
     overflow: auto;
 }
 
+.c-hamburger__footer {
+    margin-top: auto;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 900px) {
@@ -568,6 +578,11 @@
     .c-hero__title--small {
         font-size: 3rem;
     }
+
+    .c-header__email, .c-social-media {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
