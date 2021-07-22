@@ -40,6 +40,10 @@
     font-size: 6rem;
 }
 
+.c-indent {
+    margin-top: -18.3rem;
+}
+
 .c-frame {
     padding: 2rem;
     border: 1px solid black;
@@ -71,6 +75,7 @@
     opacity: 1;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 .c-carousel__caption.hide {
@@ -99,11 +104,24 @@
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
+    transition: 150ms;
+}
+
+.c-button:hover {
+    background-color: var(--secondary);
+    color: white;
 }
 
 .c-button--secondary {
+    border: 1px solid var(--secondary);
     background-color: var(--secondary);
     color: white;
+}
+
+.c-button--secondary:hover {
+    background-color: white;
+    /* border: 1px solid var(--secondary); */
+    color: var(--secondary);
 }
 
 .c-text-image {
@@ -116,15 +134,20 @@
 
 .c-text-image__outer {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
     align-items: center;
     max-width: 1100px;
-    gap: 4rem;
+    column-gap: 4rem;
+    row-gap: 8rem;
 
 }
 
+.c-text-image__image {
+    margin: 0 auto;
+}
+
 .c-text-image__image > img {
-    /* width: 100%; */
+    width: 100%;
     max-width: 500px;
 }
 
@@ -152,16 +175,12 @@
     width: auto;
     /* position: absolute; */
     padding: 3rem;
-    width: 37rem;
+    max-width: 37rem;
 }
 
 .c-text-card p {
     margin-right: 0;
     max-width: 60ch;
-}
-
-.c-indent {
-    margin-top: -18.3rem;
 }
 
 .c-images {
@@ -263,5 +282,74 @@
     margin-top: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.c-footer {
+    border-top: 1px solid black;
+    max-width: 1280px;
+    padding: 1rem 0; 
+    margin: 0 auto;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+
+.c-footer__inner {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.c-footer__right {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-footer__charity {
+    text-align: right;
+}
+
+
+.c-footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+    .c-hero__title {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .c-hero {
+        min-height: 20rem;
+        /* margin-bottom: -18.3rem; */
+    }
+
+    .c-indent {
+        margin-top: -12.3rem;
+    }
+
+    .c-text-card {
+        padding: 1.5rem;
+    }
+    
+
+    .c-hero__title {
+        font-size: 3rem;
+    }
+
+    .c-text-image__inner::before {
+        transform: translateX(0%);
+    }
+
+    .c-card__content {
+        padding: 1rem 1rem 0 1rem;
+    }
 }
 

@@ -4872,4 +4872,9 @@
       glide.play(5000);
   });
 
+  var scrollToTopButton = document.getElementById("scrollToTop");
+  scrollToTopButton.addEventListener("click", function () {
+      window.scrollTo(0, 0);
+  });
+
 }());
