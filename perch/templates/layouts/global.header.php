@@ -20,19 +20,6 @@
         </div>
         <div class="c-navigation" data-breakpoint="768" data-type="dynamic">
                 
-            <div class="c-hamburger hide">
-                <button class="c-hamburger__button">
-                    <!-- <div class="c-hamburger__line"></div>
-                    <div class="c-hamburger__line"></div>
-                    <div class="c-hamburger__line"></div> -->
-                    Menu
-                </button>
-                <?php
-                perch_pages_navigation(array(
-                    'template' => array('hamburgerMain.html', 'hamburgerSub.html')
-                ))
-                ?>
-            </div>
             <?php
             $isHome = false;
             if ($_SERVER["REQUEST_URI"] == "/") {
@@ -44,6 +31,19 @@
                 'template' => array('topNavMain.html', 'topNavSub.html')
             ));
             ?>
+            <div class="c-hamburger hide">
+                <button class="c-hamburger__button c-navbar__button">
+                    <!-- <div class="c-hamburger__line"></div>
+                    <div class="c-hamburger__line"></div>
+                    <div class="c-hamburger__line"></div> -->
+                    <a class="c-navbar__link c-navbar__link--hover-invert c-navbar__link--fixed-size">Menu</a>
+                </button>
+                <?php
+                perch_pages_navigation(array(
+                    'template' => array('hamburgerMain.html', 'hamburgerSub.html')
+                ))
+                ?>
+            </div>
         </div>
         <div class="c-header__email">
             <a href="mailto:stpetersstaithes@gmail.com">stpetersstaithes@gmail.com</a>

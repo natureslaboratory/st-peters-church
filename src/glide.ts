@@ -17,12 +17,6 @@ function getCurrentCaption(glide: HTMLElement, index: number) {
 
 function setCurrentCaption(glide: HTMLElement, caption: string) {
     let captionDiv = getCaptionDiv(glide);
-    if (!captionDiv) {
-        console.log("no caption div")
-        return;
-    } else {
-        console.log(captionDiv)
-    }
     captionDiv.innerHTML = caption;
 }
 

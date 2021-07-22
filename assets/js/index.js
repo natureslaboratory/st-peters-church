@@ -80,17 +80,29 @@
 
             this.moveAllToNav();
             var timeout = 0;
+            this.clearMaxWidth();
 
             while (this.isNavWrapped() && timeout < 1000) {
-              this.moveOneToHamburger();
+              this.moveOneToHamburger(); // this.setMaxWidth();
+
               timeout++;
             }
+
+            this.setMaxWidth();
 
             if (timeout > 900) {
               throw new Error("Infinite Loop");
             }
 
             this.show();
+          };
+
+          DynamicNavigation.prototype.setMaxWidth = function () {
+            this.navBar.node.style.maxWidth = this.navBar.totalWidth + 5 + "px";
+          };
+
+          DynamicNavigation.prototype.clearMaxWidth = function () {
+            this.navBar.node.style.maxWidth = null;
           }; // Private Bool
 
 
@@ -99,7 +111,7 @@
             var navWidth = navigationRect.right - navigationRect.left;
             var linksWidth = this.navBar.totalWidth; // 50 is icon width, refactor later to use actual icon width
 
-            if (linksWidth > navWidth - 50) {
+            if (linksWidth > navWidth) {
               return true;
             }
 
@@ -670,7 +682,7 @@
             if (this.childLinksNode) {
               this.childLinksNode.classList.add("show");
               var buttonRect = this.node.getBoundingClientRect();
-              this.childLinksNode.style.top = buttonRect.bottom + "px";
+              this.childLinksNode.style.top = buttonRect.bottom - buttonRect.top + "px";
               this.icon.spin();
             }
           };
@@ -4834,13 +4846,6 @@
   }
   function setCurrentCaption(glide, caption) {
       var captionDiv = getCaptionDiv(glide);
-      if (!captionDiv) {
-          console.log("no caption div");
-          return;
-      }
-      else {
-          console.log(captionDiv);
-      }
       captionDiv.innerHTML = caption;
   }
   function hideCaption(glide) {
