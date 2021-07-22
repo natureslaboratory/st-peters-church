@@ -38,8 +38,8 @@
     <perch:block type="text" label="Text">
         <div 
             class="l-block 
-                   l-block--<perch:content label="Background Color" id="block_colour" type="select" options="white, primary, secondary, dark" />
-                   l-block--padding-<perch:content label="Padding" type="select" options="none, top, bottom, half, both" id="block_padding" >" >
+                   l-block--<perch:template path="content/block_options/colour.html" />
+                   l-block--padding-<perch:template path="content/block_options/padding.html" />" >
             <div class="l-restrict">
                 <perch:content id="text_content" type="textarea" editor="redactor" label="Content" html>
             </div>
@@ -47,7 +47,10 @@
     </perch:block>
 
     <perch:block type="text-image" label="Text-Image">
-        <div class="l-block c-text-image">
+        <div class="c-text-image
+                    l-block 
+                    l-block--<perch:template path="content/block_options/colour.html" />
+                    l-block--padding-<perch:template path="content/block_options/padding.html" />" >
             <div class="c-text-image__outer">
                 <div class="l-restrict c-text-image__inner">
                     <div class="c-text-image__text">
@@ -67,7 +70,10 @@
     </perch:block>
 
     <perch:block type="text_card" label="Text Card">
-        <div class="l-block <perch:content id="indent" label="Indent Over Hero" type="checkbox" value="c-indent" />">
+        <div class="l-block 
+                    l-block--<perch:template path="content/block_options/colour.html" />
+                    l-block--padding-<perch:template path="content/block_options/padding.html" /> 
+                    <perch:content id="indent" label="Indent Over Hero" type="checkbox" value="c-indent" /> ">
             <div class="l-restrict">
                 <div class="c-text-card">
                     <perch:content id="textCardContent" label="Text" type="textarea" editor="redactor" html />
@@ -107,7 +113,7 @@
     </perch:block>
 
     <perch:block type="cta" label="Call To Action">
-        <div class="l-block">
+        <div class="l-block l-block--<perch:content label="Background Color" id="block_colour" type="select" options="white, primary, secondary, dark" />">
             <div class="l-restrict c-cta">
                 <div class="c-cta__text">
                     <perch:content id="ctaText" label="Text" type="textarea" editor="redactor" html />

@@ -98,9 +98,9 @@
 
 .c-button {
     background-color: var(--primary);
+    border: 1px solid var(--primary);
     font-size: 1rem;
     padding: 1.25rem 2.5rem;
-    border: none;
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
@@ -111,6 +111,16 @@
     background-color: var(--secondary);
     color: white;
 }
+
+.l-block--primary .c-button {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.l-block--secondary .c-button:hover {
+    background-color: var(--secondary);
+}
+
 
 .c-button--secondary {
     border: 1px solid var(--secondary);
@@ -238,6 +248,11 @@
     height: 1rem;
     background-color: var(--primary);
     position: absolute;
+}
+
+.l-block--primary *::after {
+    background-color: var(--secondary);
+    /* opacity: 0.3; */
 }
 
 .c-cta__text {

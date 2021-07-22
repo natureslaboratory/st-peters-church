@@ -25,3 +25,8 @@
 .l-block--primary {
     background-color: var(--primary);
 }
+
+.l-block--secondary {
+    background-color: var(--secondary);
+    color: white;
+}
