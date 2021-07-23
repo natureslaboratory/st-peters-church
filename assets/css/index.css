@@ -378,6 +378,7 @@
     padding: 2rem;
 }
 
+
 .c-footer__right {
     display: flex;
     gap: 2rem;
@@ -632,6 +633,13 @@
 
 }
 
+@media screen and (max-width: 700px) {
+    .c-footer__inner {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .c-hero {
         /* min-height: 20rem; */
@@ -666,5 +674,18 @@
     .c-hero__title--small {
         font-size: 2rem;
     }
+
+    .c-footer__right {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .c-footer__charity {
+        text-align: center;
+    }
+}
+
+body.no-scroll {
+    overflow-y: hidden;
 }
 
