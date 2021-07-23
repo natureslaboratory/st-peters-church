@@ -5,7 +5,7 @@
 	<title><?php perch_pages_title(); ?></title>
 	<?php perch_page_attributes(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <link rel="stylesheet" href="/node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="/assets/css/modules/glide.core.min.css">
     <link href="/assets/css/base.css?v=<?= rand() ?>" rel="stylesheet" type="text/css" />
     <link href="/assets/css/responsive-nav.css?v=<?= rand() ?>" rel="stylesheet" type="text/css" />
     <link href="/assets/css/layout.css?v=<?= rand() ?>" rel="stylesheet" type="text/css" />
@@ -15,7 +15,7 @@
 
 <div class="l-wrap">
     <div class="l-block l-block--padding-none">
-        <div class="c-header">
+        <div class="c-header <?= perch_layout_var("noHeaderBorder", true) ? "c-header--no-border" : "" ?>">
             <div class="c-logo">
                 <p>Icon</p>
             </div>

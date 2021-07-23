@@ -36,6 +36,14 @@
     padding: 0 1rem 6rem 1rem;
 }
 
+.l-block--padding-large { 
+    padding: 9rem 1rem;
+}
+
+.l-block--padding-double {
+    padding: 12rem 1rem;
+}
+
 .l-block--primary {
     background-color: var(--primary);
 }

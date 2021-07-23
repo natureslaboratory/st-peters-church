@@ -10,7 +10,7 @@ error_reporting(-1);
 ini_set('error_reporting', E_ALL);
 
 ?>
-<?php perch_layout("global.header") ?>
+<?php perch_layout("global.header", ["noHeaderBorder" => perch_get("s") ? true : false]) ?>
 
 <div id="content">
     <?php 

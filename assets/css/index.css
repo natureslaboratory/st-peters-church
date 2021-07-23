@@ -8,6 +8,10 @@
     margin: 0 auto;
 }
 
+.c-header--no-border {
+    border: none;
+}
+
 .c-logo {
     padding: 0.8rem;
     border: 1px solid black;
@@ -150,8 +154,8 @@
 
 .c-text-image {
     position: relative;
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     display: flex;
     justify-content: center;
 }
@@ -311,6 +315,19 @@
     margin-top: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+:is(.l-block--primary, .l-block--secondary) .c-form :is(.c-form__input, .c-form__textarea) {
+    background-color: white;
+}
+
+.l-block--secondary .c-form :is(.c-form__label) {
+    color: white;
+}
+
+.l-block--secondary .c-form :is(.c-form__submit) {
+    color: black;
+    background-color: var(--primary);
 }
 
 .c-footer {
@@ -526,7 +543,7 @@
     line-height: 1.75;
 }
 
-.c-hamburger__element-button {
+.c-hamburger__element-button, .c-navbar__button {
     line-height: 1.75;
 }
 
@@ -547,7 +564,7 @@
     height: auto;
 }
 
-.c-navbar > * > :is(.c-navbar__link), .c-hamburger__button > a {
+.c-navbar > * > :is(.c-navbar__link, .c-navbar__button), .c-hamburger__button > a {
     padding: 0.5rem 1rem;
 }
 

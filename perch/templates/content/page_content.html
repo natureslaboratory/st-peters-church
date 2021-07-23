@@ -9,7 +9,7 @@
     </perch:block>
 
     <perch:block type="carousel" label="Carousel">
-        <div class="l-block">
+        <perch:template path="content/blocks/l-block__start.html" />
             <div class="glide l-restrict c-carousel">
                 <div class="glide__track" data-glide-el="track">
                     <div class="glide__slides">
@@ -31,68 +31,61 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <perch:template path="content/blocks/l-block__end.html" />
     </perch:block>
 
     <perch:block type="text" label="Text">
-        <div 
-            class="l-block 
-                    l-block--<perch:template path="content/block_options/colour.html" />
-                    l-block--padding-<perch:template path="content/block_options/padding.html" />" >
+        <perch:template path="content/blocks/l-block__start.html" />
             <div class="l-restrict">
                 <perch:content id="text_content" type="textarea" editor="redactor" label="Content" html>
             </div>
-        </div>
+        <perch:template path="content/blocks/l-block__end.html" />
     </perch:block>
 
     <perch:block type="text-image" label="Text-Image">
-        <div class="c-text-image
-                    l-block 
-                    l-block--<perch:template path="content/block_options/colour.html" />
-                    l-block--padding-<perch:template path="content/block_options/padding.html" />" >
-            <div class="c-text-image__outer">
-                <div class="l-restrict c-text-image__inner">
-                    <div class="c-text-image__text">
-                        <perch:content id="text_content" type="textarea" editor="redactor" label="Text" html>
+        <perch:template path="content/blocks/l-block__start.html" customClass="c-text-image" />
+            <div class="c-text-image">
+                <div class="c-text-image__outer">
+                    <div class="l-restrict c-text-image__inner">
+                        <div class="c-text-image__text">
+                            <perch:content id="text_content" type="textarea" editor="redactor" label="Text" html>
+                        </div>
+                        <perch:if exists="buttonLink">
+                            <a class="c-text-image__link" href="<perch:content id="buttonLink" type="text" label="Button Link" />">
+                                <button class="c-button"><perch:content type="text" id="buttonLabel" label="Button Text" /></button>
+                            </a>
+                        </perch:if>
                     </div>
-                    <perch:if exists="buttonLink">
-                        <a class="c-text-image__link" href="<perch:content id="buttonLink" type="text" label="Button Link" />">
-                            <button class="c-button"><perch:content type="text" id="buttonLabel" label="Button Text" /></button>
-                        </a>
-                    </perch:if>
-                </div>
-                <div class="c-text-image__image">
-                    <img src="<perch:content id="image" label="Image" type="image">" >
+                    <div class="c-text-image__image">
+                        <img src="<perch:content id="image" label="Image" type="image">" >
+                    </div>
                 </div>
             </div>
-        </div>
+        <perch:template path="content/blocks/l-block__end.html" />
     </perch:block>
 
     <perch:block type="text_card" label="Text Card">
-        <div class="l-block 
-                    l-block--<perch:template path="content/block_options/colour.html" />
-                    l-block--padding-<perch:template path="content/block_options/padding.html" /> 
-                    <perch:content id="indent" label="Indent Over Hero" type="checkbox" value="c-indent" /> ">
+        <perch:template path="content/blocks/l-block__start.html" />
             <div class="l-restrict">
                 <div class="c-text-card">
                     <perch:content id="textCardContent" label="Text" type="textarea" editor="redactor" html />
                 </div>
             </div>
-        </div>
+            <perch:template path="content/blocks/l-block__end.html" />
     </perch:block>
 
     <perch:block type="images" label="Images">
-        <div class="l-block">
+        <perch:template path="content/blocks/l-block__start.html" />
             <div class="l-restrict c-images">
                 <perch:repeater label="Image Repeater" id="repeater">
                     <img class="c-images__image" src="<perch:content id="image" label="Image" type="image" />" />
                 </perch:repeater>
             </div>
-        </div>
+        <perch:template path="content/blocks/l-block__end.html" />
     </perch:block>
 
     <perch:block type="cards" label="Cards">
-        <div class="l-block">
+        <perch:template path="content/blocks/l-block__start.html" />
             <div class="l-restrict c-cards">
                 <perch:repeater label="Cards" id="cards">
                     <div class="c-card">
@@ -108,11 +101,11 @@
                     </div>
                 </perch:repeater>
             </div>
-        </div>
+        <perch:template path="content/blocks/l-block__end.html" />
     </perch:block>
 
     <perch:block type="cta" label="Call To Action">
-        <div class="l-block l-block--<perch:content label="Background Color" id="block_colour" type="select" options="white, primary, secondary, dark" />">
+        <perch:template path="content/blocks/l-block__start.html" />
             <div class="l-restrict c-cta">
                 <div class="c-cta__text">
                     <perch:content id="ctaText" label="Text" type="textarea" editor="redactor" html />
@@ -121,12 +114,17 @@
                     <button class="c-button"><perch:content type="text" id="buttonLabel" label="Button Text" /></button>
                 </a>
             </div>
-        </div>
+        <perch:template path="content/blocks/l-block__end.html" />
     </perch:block>
 
     <perch:block type="contact-form" label="Contact Form">
-        <div class="l-block">
-            <perch:form id="contact" action="" type="default" app="perch_forms" label="Contact Form" class="c-form l-restrict">
+        <perch:template path="content/blocks/l-block__start.html" />
+            <perch:form id="contact" action="" method="post" type="default" app="perch_forms" label="Contact Form" class="c-form l-restrict">
+                <perch:success>
+                    <div class="l-restrict">
+                        <p><perch:content id="thanksMessage" type="text" label="Message" /></p>
+                    </div>
+                </perch:success>
                 <div class="c-form__column">
                     <div class="c-form__section">
                         <perch:label class="c-form__label" for="name">Your Name</perch:label>
@@ -150,7 +148,7 @@
                 </div>
     
             </perch:form>
-        </div>
+        <perch:template path="content/blocks/l-block__end.html" />
     </perch:block>
 
 
