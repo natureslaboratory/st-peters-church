@@ -8,8 +8,23 @@
     margin: 0 auto;
 }
 
+/* .c-header {
+    display: grid;
+    grid-template-columns: 1fr 1100px 1fr;
+}
+
+.c-header__center {
+    display: flex;
+}
+
+.c-header__email {
+    display: flex;
+    align-items: center;
+} */
+
 .c-header--no-border {
     border: none;
+    align-items: center;
 }
 
 .c-logo {
