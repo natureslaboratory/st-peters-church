@@ -36,7 +36,7 @@
 
     <perch:block type="text" label="Text">
         <perch:template path="content/blocks/l-block__start.html" />
-            <div class="l-restrict">
+            <div class="l-restrict c-text c-text--align-<perch:content id="textAlign" label="Text Align" type="select" options="left, centre, right">">
                 <perch:content id="text_content" type="textarea" editor="redactor" label="Content" html>
             </div>
         <perch:template path="content/blocks/l-block__end.html" />

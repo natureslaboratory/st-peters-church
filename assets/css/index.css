@@ -82,6 +82,21 @@
     border: 1px solid black;
 }
 
+.c-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-text--align-right {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.c-text--align-centre {
+    text-align: center;
+    align-items: center;
+}
+
 .c-carousel {
     max-width: 1100px;
 }
