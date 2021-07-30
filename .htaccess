@@ -1,4 +1,6 @@
 RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteRule ^news/tag/([a-zA-Z0-9-]+)$ /news/index.php?t=$1 [L,B]
 RewriteRule ^news/author/([a-zA-Z0-9-]+)$ /news/index.php?a=$1 [L,B]
 RewriteRule ^news/([a-zA-Z0-9-]+)$ /news/index.php?s=$1 [L,B]
