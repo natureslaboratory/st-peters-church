@@ -15,7 +15,7 @@
                     <div class="glide__slides">
                         <perch:repeater id="slides" label="Slides">
                             <div class="c-carousel__slide">
-                                <img class="glide__slide" src="<perch:content id="slide_image" label="Image" type="image">" />
+                                <img class="glide__slide" src="<perch:content id="slide_image" label="Image" type="image" width="1280" height="768" crop="true">" />
                                 <div class="c-carousel__slide-caption">
                                     <perch:content id="caption" label="Caption" type="text" />
                                 </div>
@@ -57,7 +57,7 @@
                         </perch:if>
                     </div>
                     <div class="c-text-image__image">
-                        <img src="<perch:content id="image" label="Image" type="image">" >
+                        <img src="<perch:content id="image" label="Image" type="image" width="1024" height="1024" crop="true">" >
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
         <perch:template path="content/blocks/l-block__start.html" />
             <div class="l-restrict c-images">
                 <perch:repeater label="Image Repeater" id="repeater">
-                    <img class="c-images__image" src="<perch:content id="image" label="Image" type="image" />" />
+                    <img class="c-images__image" src="<perch:content id="image" label="Image" type="image" width="1280" />" />
                 </perch:repeater>
             </div>
         <perch:template path="content/blocks/l-block__end.html" />
@@ -89,7 +89,7 @@
             <div class="l-restrict c-cards">
                 <perch:repeater label="Cards" id="cards">
                     <div class="c-card">
-                        <img class="c-card__image" src="<perch:content label="Header Image" type="image" id="headerImage" />">
+                        <img class="c-card__image" src="<perch:content label="Header Image" type="image" id="headerImage" width="1920" height="768" crop="true" />">
                         <div class="c-card__content">
                             <div class="c-card__text">
                                 <perch:content id="cardText" label="Text" type="textarea" editor="redactor" html />
