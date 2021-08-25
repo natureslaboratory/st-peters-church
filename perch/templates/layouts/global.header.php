@@ -50,7 +50,7 @@
                 <a href="mailto:spccstaithes@gmail.com">spccstaithes@gmail.com</a>
             </div>
             <div class="c-social-media">
-                <i class="fab fa-facebook"></i>
+                <a href="https://www.facebook.com/St-Peters-Staithes-336076093552959"><i class="fab fa-facebook"></i></a>
             </div>
         
         </div>
