@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="c-header__email">
-                <a href="mailto:stpetersstaithes@gmail.com">stpetersstaithes@gmail.com</a>
+                <a href="mailto:spccstaithes@gmail.com">spccstaithes@gmail.com</a>
             </div>
             <div class="c-social-media">
                 <i class="fab fa-facebook"></i>
