@@ -17,7 +17,7 @@
     <div class="l-block l-block--padding-none">
         <div class="c-header <?= perch_layout_var("noHeaderBorder", true) ? "c-header--no-border" : "" ?>">
             <div class="c-logo">
-                <p>Icon</p>
+                <img src="/assets/images/logo.svg" alt="St Peter's, Staithes" />
             </div>
             <div class="c-navigation" data-breakpoint="768" data-type="dynamic">
                     
