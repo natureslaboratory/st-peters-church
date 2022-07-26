@@ -6,9 +6,7 @@
             </div>
             <div class="c-footer__right">
                 <div class="c-footer__charity">
-                    <p>St Peter's CIC is a not for profit something or other</p>
-                    <p>Registered in England and Wales</p>
-                    <p>No. 123 456 789</p>
+                    <p>St Peter’s Centre CIC is a not-for-profit Community Interest Company. It is registered at Companies House 1300328.</p>
                 </div>
                 <button id="scrollToTop" class="c-button c-button--secondary">Top <i class="fas fa-arrow-up"></i></button>
             </div>
