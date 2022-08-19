@@ -22,7 +22,7 @@
                 <p class="c-post-card__date"><perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" label="Date Published"/></p>
             </div>
             <a href="/news/<perch:if exists="section"><perch:blog id="section"><perch:else>post</perch:if>/<perch:blog id="postSlug">" rel="bookmark" class="c-post-card__feature-image-wrapper">
-                <img src="<perch:blog id="featureImage" height="300" width="300" crop>" alt="Feature Image" class="c-post-card__feature-image">
+                <img src="<perch:blog id="featureImage" type="image" width="300" height="300" crop="true" help="Use a high resolution image here (more than 1280px wide)" label="Feature Image" />" alt="Feature Image" class="c-post-card__feature-image">
             </a>
         </div>
 <perch:after>
