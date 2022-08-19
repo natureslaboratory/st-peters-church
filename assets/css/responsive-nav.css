@@ -283,3 +283,7 @@
 .c-hamburger__search .c-search {
     padding: 0;
 }
+
+li.c-navbar__sub-element{
+	list-style:none;
+}
