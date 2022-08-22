@@ -299,3 +299,8 @@ li.c-navbar__sub-element{
 	font-size:0.9rem;
 	font-weight:700;
 }
+
+.c-navbar__sub-menu .c-navbar__sub-menu li a{
+	padding:0.5rem 1rem;
+	font-style: italic;
+}
