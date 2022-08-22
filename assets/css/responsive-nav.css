@@ -304,3 +304,24 @@ li.c-navbar__sub-element{
 	padding:0.5rem 1rem;
 	font-style: italic;
 }
+
+ul.c-hamburger__sub-menu{
+	margin:0;
+}
+
+.c-hamburger__sub-menu .c-navbar__sub-menu{
+	position:relative;
+	opacity: 1;
+	margin:0;
+	pointer-events: all !important;
+}
+
+.c-hamburger__sub-menu .c-navbar__sub-menu li{
+	font-size:0.9rem;
+	font-weight:700;
+}
+
+.c-hamburger__sub-menu .c-navbar__sub-menu li a{
+	padding:0.5rem 1rem;
+	font-style: italic;
+}
