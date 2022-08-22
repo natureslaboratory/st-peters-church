@@ -291,4 +291,10 @@ li.c-navbar__sub-element{
 .c-navbar__sub-menu .c-navbar__sub-menu{
 	position:relative;
 	opacity: 1;
+	margin:0;
+}
+
+.c-navbar__sub-menu .c-navbar__sub-menu li{
+	font-size:0.9rem;
+	font-weight:700;
 }
