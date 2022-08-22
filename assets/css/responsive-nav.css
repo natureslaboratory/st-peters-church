@@ -314,7 +314,7 @@ ul.c-hamburger__sub-menu{
 	opacity: 1;
 	margin: 0;
 	pointer-events: all !important;
-	max-height:auto !important;
+	max-height: inherit !important;
 }
 
 .c-hamburger__sub-menu .c-navbar__sub-menu li{
