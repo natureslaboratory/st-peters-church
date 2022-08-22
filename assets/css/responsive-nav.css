@@ -312,8 +312,9 @@ ul.c-hamburger__sub-menu{
 .c-hamburger__sub-menu .c-hamburger__sub-menu{
 	position:relative;
 	opacity: 1;
-	margin:0 ;
+	margin: 0;
 	pointer-events: all !important;
+	max-height:auto;
 }
 
 .c-hamburger__sub-menu .c-navbar__sub-menu li{
