@@ -287,3 +287,8 @@
 li.c-navbar__sub-element{
 	list-style:none;
 }
+
+.c-navbar__sub-menu .c-navbar__sub-menu{
+	position:relative;
+	opacity: 1;
+}
