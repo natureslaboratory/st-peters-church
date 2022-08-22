@@ -317,7 +317,7 @@ ul.c-hamburger__sub-menu{
 	max-height: inherit !important;
 }
 
-.c-hamburger__sub-menu .c-navbar__sub-menu li{
+.c-hamburger__sub-menu .c-hamburger__sub-menu li{
 	font-size:0.9rem;
 	font-weight:700;
 }
