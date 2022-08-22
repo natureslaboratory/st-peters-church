@@ -292,6 +292,7 @@ li.c-navbar__sub-element{
 	position:relative;
 	opacity: 1;
 	margin:0;
+	pointer-events: all !important;
 }
 
 .c-navbar__sub-menu .c-navbar__sub-menu li{
