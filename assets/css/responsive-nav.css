@@ -302,7 +302,6 @@ li.c-navbar__sub-element{
 
 .c-navbar__sub-menu .c-navbar__sub-menu li a{
 	padding:0.5rem 1rem;
-	font-style: italic;
 }
 
 ul.c-hamburger__sub-menu{
@@ -324,5 +323,4 @@ ul.c-hamburger__sub-menu{
 
 .c-hamburger__sub-menu .c-hamburger__sub-menu li a{
 	padding:0.5rem 1rem;
-	font-style: italic;
 }
