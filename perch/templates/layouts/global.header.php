@@ -3,7 +3,21 @@
 <head>
     <meta charset="utf-8" />
 	<title><?php perch_pages_title(); ?></title>
-	<?php perch_page_attributes(); ?>
+	<?php
+    $domain        = 'https://'.$_SERVER["HTTP_HOST"];
+    $url           = $domain.$_SERVER["REQUEST_URI"];
+    $sitename      = "St Peter's Centre, Staithes";
+    $sharing_image = 'https://stpetersstaithes.org.uk/perch/resources/fish-1-w1280h768.png';
+
+    PerchSystem::set_var('domain',$domain);
+    PerchSystem::set_var('url',$url);
+    PerchSystem::set_var('sharing_image',$sharing_image);
+    PerchSystem::set_var('twittername',$twittername);
+
+    perch_page_attributes(array(        
+      'template' => 'default.html'    
+    ));
+    ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="stylesheet" href="/assets/css/modules/glide.core.min.css">
     <link href="/assets/css/base.css?v=<?= rand() ?>" rel="stylesheet" type="text/css" />
