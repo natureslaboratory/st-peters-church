@@ -45,7 +45,9 @@ ini_set('error_reporting', E_ALL);
                 <?php
                         perch_blog_custom([
                             "template" => "post_in_list_card.html",
-                            "count" => 10 
+                            "count" => 10,
+                            "sort" => 'postDateTime',
+                            "sort-order" => "DESC"
                         ]);
                     }
                 ?>
