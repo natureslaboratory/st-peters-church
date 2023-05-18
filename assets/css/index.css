@@ -690,3 +690,17 @@ body.no-scroll {
     overflow-y: hidden;
 }
 
+.c-artist{
+	width:100%;
+	padding:1rem;
+	background:#f1f2f2;
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 2rem;
+}
+
+@media screen and (max-width:680px){
+	.c-artist{
+		grid-template-columns: 1fr;
+	}
+}
