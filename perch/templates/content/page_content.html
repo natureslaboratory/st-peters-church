@@ -46,7 +46,7 @@
         <perch:template path="content/blocks/l-block__start.html" />
             <div class="l-restrict c-text c-text--align-<perch:content id="textAlign" label="Text Align" type="select" options="left, centre, right"> c-artist">
 	            <div>
-		            <h2><perch:cotnent id="name" type="text" label="Name" /></h2>
+		            <h2><perch:content id="name" type="text" label="Name" /></h2>
 	                <perch:content id="biography" type="textarea" editor="redactor" label="Biography" html>
 	                <perch:if exists="buttonLink">
 	                	<a class="c-text-image__link" href="<perch:content id="buttonLink" type="text" label="Website Link" />">
@@ -56,7 +56,9 @@
 	            </div>
 	            <div>
 		            <perch:if exists="image"><img src="<perch:content id="image" label="Image" type="image" width="1024">" alt="<perch:content id="name">" /></perch:if>
-		            <perch:if exists="youtube"><perch:content id="video" type="youtube" width="800" label="YouTube URL" output="embed" autoplay="1" modestbranding="1"></perch:if>
+		            <perch:if exists="youtube">
+		            	<iframe width="560" height="315" src="<perch:content id="video" type="text" label="YouTube URL" replace="https://youtu.be/|https://www.youtube.com/embed/">>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </perch:if>
 	            </div>
             </div>
         <perch:template path="content/blocks/l-block__end.html" />
