@@ -693,7 +693,7 @@ body.no-scroll {
 .c-artist{
 	width:100%;
 	padding:1rem;
-	background:#f1f2f2;
+	background:var(--primary);
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column-gap: 2rem;
